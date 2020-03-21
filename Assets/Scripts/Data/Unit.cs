@@ -71,7 +71,8 @@ namespace Assets.Scripts.Data
                 readyArmors.Add(item);
             }
 
-            readyItem.processItem (ready["item"]);
+            if (ready["item"] != null)
+                readyItem.processItem (ready["item"]);
 
             JSONNode jcanStudy = unit["canStudy"];
             for (int a = 0; a < jcanStudy.Count; a++)
